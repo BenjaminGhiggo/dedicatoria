@@ -80,7 +80,7 @@ def agregar_fuentes_y_estilos():
     /* Estilos para el mensaje final */
     .footer {
         font-family: 'Great Vibes', cursive;
-        font-size: 28px; /* Tamaño aumentado */
+        font-size: 36px; /* Tamaño aumentado */
         color: #ff69b4;
         text-align: center;
         margin-top: 40px;
@@ -121,7 +121,7 @@ def agregar_fuentes_y_estilos():
     /* Media Queries para dispositivos móviles */
     @media (max-width: 768px) {
         .stApp {
-            background-size: contain; /* Ajustar el tamaño de la imagen para mostrar ambos gatos */
+            background-size: cover; /* Cambiado de contain a cover para mostrar ambos gatos */
             background-position: center;
         }
 
@@ -151,7 +151,7 @@ def agregar_fuentes_y_estilos():
 
 # Configuración de la página
 st.set_page_config(
-    page_title="Benjamín y Araceli",
+    page_title="Benjamin y Araceli",
     page_icon="❤️",
     layout="centered",
     initial_sidebar_state="collapsed",
@@ -163,12 +163,28 @@ agregar_fuentes_y_estilos()
 
 # Título principal
 st.markdown("""
-    <div class='titulo-principal'>Benjamín y Araceli ❤️</div>
+    <div style="
+        font-family: 'Great Vibes', cursive;
+        color: #ff69b4;
+        font-size: 43px; /* Ajusta el tamaño aquí */
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 3px 3px 6px #000000;">
+        Benjamin y Araceli ❤️
+    </div>
     """, unsafe_allow_html=True)
 
 # Subtítulo con emojis
 st.markdown("""
-    <div class='subtitulo'>Un amor que crece cada día 🌹✨</div>
+    <div style="
+        font-family: 'Great Vibes';
+        color: #ff0000;
+        font-size: 33px; /* Ajusta el tamaño aquí */
+        text-align: center;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 4px #000000;">
+        Un amor que crece cada día 🌹✨
+    </div>
     """, unsafe_allow_html=True)
 
 # Mostrar una imagen con estilo y marco
@@ -186,38 +202,47 @@ try:
 except FileNotFoundError:
     st.markdown("<p class='contenido'>Imagen no encontrada. Asegúrate de tener 'princesa.jpg' en la carpeta del proyecto.</p>", unsafe_allow_html=True)
 
-# Poemas con estilos
+# Poemas con estilos y emojis
 poemas = [
     {
-        "titulo": "Eres mi inspiración",
+        "titulo": "Eres mi vida 🥹❤️",
         "contenido": """
-Araceli, tu sonrisa ilumina mi día,<br>
-como el sol que brilla en la mañana fría.<br>
-Cada momento a tu lado es un regalo,<br>
-mi corazón late por ti, sin fallo.
+Antes de ti no creía que el amor algún día llegaría, pero me demostraste que ese gran día sí llegaría ❤️<br>
+Hoy eres lo más importante en mi vida ❤️<br>
+Llenaste el vacío en mi pecho con tu mirada y una hermosa sonrisa ❤️<br>
+Ahora te amo demasiado y quiero que sepas que mi corazón quema de amor por ti ❤️😊
         """
     },
     {
-        "titulo": "Nuestro amor",
+        "titulo": "Eres mi inspiración 🌟❤️",
         "contenido": """
-En tus ojos encuentro mi hogar,<br>
-tu amor es el sueño que quiero alcanzar.<br>
-Juntos caminamos por la vida,<br>
-mi amor por ti nunca tendrá medida.
+Araceli, tu sonrisa ilumina mi día 😊❤️,<br>
+como el sol que brilla en la mañana fría 🌞❤️.<br>
+Cada momento a tu lado es un regalo 🎁❤️,<br>
+mi corazón late por ti, sin fallo ❤️😊.
         """
     },
     {
-        "titulo": "Para siempre",
+        "titulo": "Nuestro amor 💕😊",
         "contenido": """
-Quiero escribir nuestra historia en estrellas,<br>
-cada capítulo lleno de dulces centellas.<br>
-Araceli, mi amor por ti es eterno,<br>
-juntos seremos felices, sin invierno.
+En tus ojos encuentro mi hogar 🏡❤️,<br>
+tu amor es el sueño que quiero alcanzar 🌠😊.<br>
+Juntos ahora, caminamos por la vida ❤️,<br>
+mi amor por ti nunca tendrá medida porque es infinito 🥹❤️💕.
+        """
+    },
+    {
+        "titulo": "Para siempre 💖😊",
+        "contenido": """
+Quiero escribir nuestra historia en estrellas ✨❤️,<br>
+cada capítulo lleno de dulces centellas 🌟😊.<br>
+Araceli, mi amor por ti es eterno 💞❤️,<br>
+juntos seremos felices, por siempre, te lo prometo con mi vida 🥹😊💖.
         """
     }
 ]
 
-# Mostrar los poemas con estilos
+# Mostrar los poemas con estilos y emojis
 for poema in poemas:
     st.markdown(f"""
     <div class='poema'>
@@ -228,9 +253,15 @@ for poema in poemas:
 
 # Mensaje final con iconos
 st.markdown("""
-    <div class='footer'>
-        Gracias por ser mi compañera, mi amiga y mi amor.<br>
-        Te amo con todo mi corazón, Araceli.<br>
+    <div style="
+        font-family: 'Great Vibes', cursive;
+        font-size: 36px; 
+        color: #ff69b4; 
+        text-align: center; 
+        margin-top: 40px; 
+        text-shadow: 3px 3px 6px #000000;">
+        Gracias por darme una oportunidad en tu corazon, tienes mi corazoncito en tus manos, ahi mi amor 😊❤️.<br>
+        Te amo con todo mi corazón, mi princesa Araceli 😊❤️.<br>
         - Benjamín ❤️
     </div>
     """, unsafe_allow_html=True)
@@ -254,7 +285,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# Añadir múltiples corazones
+# Añadir múltiples corazones con emojis
 for i in range(30):  # Puedes ajustar el número de corazones aquí
     left = random.randint(0, 100)
     size = random.randint(20, 40)
